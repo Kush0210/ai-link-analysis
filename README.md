@@ -403,7 +403,7 @@ Optional cache bypass:
 **Lowest-Cost Production Scale Option / Automatic Fallback:** **OpenAI — `gpt-6-luna`** (or **Anthropic — `claude-haiku-5-5`**)
 
 Why this pairing excels for production website link analysis:
-1. **Ultra-Low Cost per Analysis:** At ~2,500 input / ~1,500 output tokens, `gpt-6-luna` / `claude-haiku-5-5` cost **~\$0.0010** per analysis (~1,000 analyses per \$1), while `gemini-3.5-flash-lite` costs **~\$0.0045** per analysis (~220 analyses per \$1) and offers a generous developer tier for fast prototyping.
+1. **Ultra-Low Cost per Analysis:** At \~2,500 input / \~1,500 output tokens, `gpt-6-luna` / `claude-haiku-5-5` cost **\~\$0.0010** per analysis (\~1,000 analyses per \$1), while `gemini-3.5-flash-lite` costs **\~\$0.0045** per analysis (\~220 analyses per \$1) and offers a generous developer tier for fast prototyping.
 2. **1M+ Context Headroom:** All three active lightweight models support 1,000,000+ token context windows, easily handling multi-page `/about` + `/services` extracts without truncation failures.
 3. **Low Latency & Native JSON Support:** `gemini-3.5-flash-lite` (`responseMimeType: "application/json"`) and `gpt-6-luna` (`response_format: {"type": "json_object"}`) minimize syntax failures when combined with Pydantic v2 validation and 1-shot schema repair.
 4. **Resilient Dual-Provider Failover:** Configuring Gemini as primary and OpenAI (`gpt-6-luna`) as automatic fallback eliminates single-vendor outages and rate-limit bottlenecks.
